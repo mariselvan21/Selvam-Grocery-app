@@ -1,0 +1,26 @@
+.homePageWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.homePageImageContainer{
+    height: 280x;
+    width: 230px;
+    cursor: pointer;
+}
+.homePageImage{
+    height: 280px;
+    width: 250px;
+    border-radius: 10px;
+    }
+.homePageImage:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 2px gray;
+}
+.homePageImageHeading{
+    cursor: pointer;
+    color: red;
+}
+.homePageImageHeading:hover{
+    color: blue;
+}
