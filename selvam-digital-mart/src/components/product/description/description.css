@@ -1,0 +1,23 @@
+.descriptionBox{
+    width: 40%;
+    height: 300px;
+    margin: auto;
+    border: 1px solid green;
+    display: flex;
+    margin-top: 100px;
+}
+.descriptionImage{
+    width: 50%;
+    height: 300px;
+    border: 1px solid yellow;
+}
+.descriptionDetail{
+    width: 50%;
+    height: 300px;
+    border: 1px solid red;
+    
+}
+.descriptionDetail div{
+    margin-top: 20px;
+    color: red;
+}

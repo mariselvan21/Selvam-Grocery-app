@@ -1,20 +1,29 @@
-import './product.css'
+import './product.css';
+import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
-function Product() {
+
+function Product(props) {
+   
+        let finalPrice=parseInt(props.price-((props.offer/100)*props.price));
+        var navigateTo=useNavigate();
+        
     return (
         <div className='container'>
-            <div className='product'>
+            <div className='product' onClick={()=>{
+                navigateTo('/description/'+props.category+'/'+props.id)
+            }}>
                 <div className='productImage'>
-                    <img src=''></img>
+                    <img src={props.image}></img>
                 </div>
                 <div className='productDetails'>
-                    <p className='productName'></p>
-                    <p className='productDetail'>detail</p>
-                    <p className='productOffer'>%offer</p>
-                    <p className='productPrice'>price</p>
+                    <p className='productName'>{props.name}</p>
+                    <p className='productDetail'>{props.detail}</p>
+                    <p className='productOffer'>{props.offer}%offer</p>
+                    <p className='productPrice'>M.R.P <s>{(props.price)}</s> <b>{finalPrice}</b></p>
                 </div>
                 <div className='button'>
-                    <button className='offerButton'>Offer Apply</button>
+                    
                     <button className='addToCartButton'>Add to Cart</button>
                 </div>
             </div>
