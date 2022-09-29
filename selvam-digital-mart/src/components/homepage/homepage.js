@@ -39,19 +39,7 @@ function Homepage() {
                         <h1 className='homePageImageHeading'>Snacks</h1>
                     </div>
                 </div>
-                {/* <div className='image1Container'>
-                        
-                    </div>
-                    <div className='image2Container'>
-                        
-                    </div>
-                    <div className='image3Container'>
-                        
-                    </div>
-                    <div className='image4Container'>
-                        
-                    </div> */}
-
+                
             </div>
         </div>
     )
