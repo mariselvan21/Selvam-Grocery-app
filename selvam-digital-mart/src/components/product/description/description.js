@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import {useState,useEffect} from 'react';
 
 function Description(){
+    
     var params=useParams();
     // console.log(params.id);
     const[currentItem,setCurrentItem]=useState({});

@@ -1,6 +1,8 @@
-import './header.css'
+import './header.css';
+import {useNavigate} from 'react-router-dom';
 
 function Header() {
+    var navigateTo=useNavigate();
     return (
         <header className='header'>
             <div className='container'>
@@ -15,7 +17,10 @@ function Header() {
                         <div className='loginOrSignup'>
                             <p className='loginSignupName'>Login/Signup</p>
                         </div>
-                        <div className='cartIcon'>
+                        <div className='cartIcon' onClick={()=>{
+                                // alert('mari')
+                                navigateTo('cart')
+                        }}>
                            <p className='cartPlace'> &#128722; </p>
                         </div>
                     </div>

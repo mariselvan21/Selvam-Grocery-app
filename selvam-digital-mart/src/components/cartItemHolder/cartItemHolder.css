@@ -1,0 +1,8 @@
+.carItemHolderBox{
+    width:900px;
+    margin: auto;
+}
+.cartItemHolderWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
