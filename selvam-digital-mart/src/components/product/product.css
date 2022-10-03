@@ -4,7 +4,7 @@
     
 }
 .product{
-    width:300px;
+    width:220px;
     margin-top: 40px;
     border-radius: 20px;
     /* border: solid 1px blue; */
@@ -15,7 +15,7 @@
 }
 .productImage{
     height: 200px;
-    width: 300px;
+    width: 220px;
 }
 .productImage img{
     height: 100%;

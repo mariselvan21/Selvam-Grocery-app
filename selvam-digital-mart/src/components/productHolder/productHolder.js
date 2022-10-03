@@ -2,7 +2,7 @@ import './productHolder.css';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Product from '../product/product';
-import {useContext} from 'react';
+import { useContext } from 'react';
 import Appcontext from '../context/context';
 function ProductHolder() {
     var addToCart = useContext(Appcontext).addToCart;
@@ -20,15 +20,33 @@ function ProductHolder() {
         }).then((product) => {
             product.forEach((item) => {
                 item.category = params.category;
-                
-            })
+                item.finalPrice=parseInt(item.price-((item.offer/100)*item.price));
+})
             setItems(product);
         })
     }, [params]);
+    // console.log(items);
+    function ascendingOrder(){
+       var x=items.sort((a,b)=>{
+            return a.finalPrice-b.finalPrice;
+        })
+        setItems([...x]);
 
+    }
+    function descendingOrder(){
+        var y=items.sort((a,b)=>{
+             return b.finalPrice-a.finalPrice;
+         })
+         setItems([...y]);
+ 
+     }
     return (
         <div className='productHolder'>
             <div className='container'>
+                <div className='productOrderButton'>
+                    <button className='ascendingButton' onClick={ascendingOrder}>Ascending Order</button>
+                    <button className='descendingButton'onClick={descendingOrder}>Descending Order</button>
+                </div>
                 <div className='productHolderWrapper'>
                     {
                         items.map((product) => {

@@ -13,7 +13,7 @@ function CartItemHolder() {
                     <div className='cartItemHolderWrapper'>
                         {
                             cartItem.map((item) => {
-                                return (<CartItem key={Math.random()} name={item.name} image={item.image} offer={item.offer} price={item.price} id={item.id} />)
+                                return (<CartItem key={Math.random()} name={item.name} image={item.image} offer={item.offer} price={item.price} finalPrice={parseInt(item.price-((item.offer/100)*item.price))}id={item.id} />)
                             })
                         }
                     </div>

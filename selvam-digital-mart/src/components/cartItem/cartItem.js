@@ -1,8 +1,13 @@
 import './cartItem.css';
-import { useState } from 'react'
+import { useState } from 'react';
+import {useContext} from 'react';
+import Appcontext from '../context/context';
 
 function CartItem(props) {
     const [addToCardButton, setAddToCartButton] = useState(true);
+    const[quantity,setQuantity]=useState(1);
+    var removeCartItem=useContext(Appcontext).removeCartItem;
+    // console.log(removeCartItem);
     return (
         <div className='cartItem'>
             <div className='container'>
@@ -14,7 +19,7 @@ function CartItem(props) {
                         <div className='cartItemDetails'>
                             <p className='cartItemName'>{props.name}</p>
                             <p className='cartItemDetail'>{props.detail}</p>
-                            <h3 className='cartItemPrice'>{props.price}<s>RS.200</s></h3>
+                            <h3 className='cartItemPrice'>{quantity*(props.finalPrice)}<s>{quantity*(props.price)}</s></h3>
                         </div>
 
 
@@ -24,12 +29,21 @@ function CartItem(props) {
                         setAddToCartButton(false);
                     }}>
                         <button className='cartAddToCartButton'
-                        >Add to Cart <button className='increaseButton'>+</button></button>
+                        >Add to Cart <button className='increaseButton' >+</button></button>
                     </div>:
                     <div className='buttonHolder'>
-                        <button className='decreaseButton'>-</button>
-                        <p className='cartItemNumber'>1</p>
-                        <button className='increaseButton'>+</button>
+                        <button className='decreaseButton' onClick={()=>{
+                            if(quantity>1){
+                                setQuantity(quantity-1)
+                            }
+                            else {
+                                removeCartItem(props.name)
+                            }
+                        }}>-</button>
+                        <p className='cartItemNumber'>{quantity}</p>
+                        <button className='increaseButton' onClick={()=>{
+                            setQuantity(quantity+1)
+                        }}>+</button>
                     </div>}
 
                 </div>

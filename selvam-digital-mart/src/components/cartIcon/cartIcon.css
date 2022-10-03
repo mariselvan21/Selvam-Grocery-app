@@ -1,0 +1,14 @@
+.cartIconHolder{
+    position: absolute;
+    display: flex;
+    top: 13px;
+}
+.cartItemCount{
+    position: relative;
+    left: -30px;
+    color: red;
+    background-color: yellow;
+    border-radius: 10px;
+    width: 15px;
+    height: 20px;
+}

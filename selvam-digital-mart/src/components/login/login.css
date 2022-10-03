@@ -1,0 +1,37 @@
+.loginBox{
+    height: 300px;
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 350px;
+    border: solid 4px blue;
+
+}
+.loginBox:hover{
+    /* border: none; */
+    box-shadow: 0px 0px 10px 2px blue;
+}
+.loginHeading{
+    color: red;
+}
+.emailContainer{
+    margin-bottom: 30px;
+    margin-left: 16px;
+}
+.passwordContainer{
+    /* margin-left: px; */
+}
+.email{
+    margin-left: 7px;
+    /* border: none; */
+}
+.email:hover{
+    background-color: rgba(167, 164, 164, 0.267);
+    
+}
+.password{
+    margin-left: 7px;
+}
+.password:hover{
+    background-color: rgba(167, 164, 164, 0.267);
+    
+}

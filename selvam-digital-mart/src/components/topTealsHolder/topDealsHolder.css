@@ -1,0 +1,6 @@
+.topDealsHeading h1{
+    color: blue;
+}
+.topDealsWrapper{
+    display: flex;
+}
