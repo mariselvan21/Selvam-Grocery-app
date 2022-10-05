@@ -7,7 +7,7 @@ import Appcontext from '../context/context';
 function ProductHolder() {
     var addToCart = useContext(Appcontext).addToCart;
     const params = useParams();
-    // console.log(params);
+    //  console.log(params);
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('https://633293e2573c03ab0b4b5764.mockapi.io/' + params.category).then((response) => {

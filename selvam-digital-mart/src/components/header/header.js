@@ -1,8 +1,13 @@
 import './header.css';
+import Login from '../login/login';
 import {useNavigate} from 'react-router-dom';
 import CartIcon  from '../cartIcon/cartIcon';
+import {useContext} from 'react';
+import Appcontext from '../context/context';
 
 function Header() {
+    var isLoggedin=useContext(Appcontext).isLoggedin;
+    var setIsLoggedin=useContext(Appcontext).setIsLoggedin;
     var navigateTo=useNavigate();
     return (
         <header className='header'>
@@ -16,7 +21,9 @@ function Header() {
                     </div>
                     <div className='headerRightSide'>
                         <div className='loginOrSignup'>
-                            <p className='loginSignupName'>Login/Signup</p>
+                            {isLoggedin==true && <a className='logout' onClick={()=>{
+                                setIsLoggedin(false);
+                            }}>LOG OUT</a>}
                         </div>
                         <div className='headerCartIconHolder' onClick={()=>{
                                 // alert('mari')

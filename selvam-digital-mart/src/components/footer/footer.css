@@ -1,0 +1,30 @@
+footer{
+    /* height: 70px; */
+    background-color: aquamarine;
+    
+}
+.footerWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerName{
+    color:blue;
+}
+.designerNameHeading{
+    text-align: right;
+    padding-top: 17px;
+    color: blue;
+    font-size: 20px;
+}
+
+
+.designerName{
+    margin-left: 20px;
+    color: red;
+}
+.footerLeftSide p{
+    margin-top: -14px;
+    color: red;
+}
+

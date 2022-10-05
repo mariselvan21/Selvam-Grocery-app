@@ -7,8 +7,11 @@ import image3 from '../images/HomePageImages/fruitsImage.jpg';
 import image4 from '../images/HomePageImages/grocerysnacks.png';
 
 
+
+
 function Homepage() {
     var navigateTo=useNavigate();
+    // console.log(image1);
    
     return (
         <div className='homepage'>

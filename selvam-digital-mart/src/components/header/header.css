@@ -37,16 +37,19 @@
 .logoHeading:hover{
     color: blue;
 }
-.loginSignupName{
+.logout{
     color: blue;
     cursor: pointer;
 }
-.loginSignupName:hover{
+.logout:hover{
     color:white;
 }
 
 .cartPlace{
     cursor: pointer;
-    
+    }
+
+.headerCartIconHolder{
+    cursor: pointer;
 }
 
