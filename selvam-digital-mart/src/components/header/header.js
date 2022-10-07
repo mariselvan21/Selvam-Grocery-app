@@ -1,5 +1,4 @@
 import './header.css';
-import Login from '../login/login';
 import {useNavigate} from 'react-router-dom';
 import CartIcon  from '../cartIcon/cartIcon';
 import {useContext} from 'react';
